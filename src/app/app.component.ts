@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Basics';
+  propsData = 'This Data is sended from parent'
+  href='/'
 }

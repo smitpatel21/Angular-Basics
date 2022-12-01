@@ -1,0 +1,52 @@
+<button class="btn btn-primary" (click)="toggleData()">
+  toggle the given data
+</button>
+<p *ngIf="toggler; then ifBlock; else elseBlock"></p>
+
+<h2 *ngIf="toggler == false">If false the show this</h2>
+
+<ng-template [ngIf]="color === 'red'">
+  <div class="container-fluid" [ngStyle]="{ backgroundColor: color }">
+    <h3>this is red</h3>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, deserunt.
+    </p>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="color === 'green'">
+  <div class="container-fluid" [ngStyle]="{ backgroundColor: color }">
+    <h3>this is green</h3>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, deserunt.
+    </p>
+  </div>
+</ng-template>
+
+<ng-template #ifBlock>
+  <h1>If condition is true</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+    recusandae assumenda culpa at est laboriosam doloribus, animi doloremque
+    aliquid omnis labore! Quaerat, repudiandae modi? Quidem laboriosam
+    accusantium doloremque illum assumenda explicabo cumque iure reiciendis
+    consectetur impedit cum quas ratione ad, fugit fugiat consequuntur at dolore
+    a praesentium quos? Dolore, accusantium?
+  </p>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>Else condition is true</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum eius
+    alias error. Inventore nemo deserunt mollitia nulla labore quos quidem ut
+    quibusdam! Veniam harum animi deleniti excepturi ipsa temporibus beatae at
+    saepe maxime a sequi accusantium magnam, porro facere, dolores possimus
+    obcaecati impedit, sed nostrum quas. Fugit eum a natus accusantium maxime,
+    neque vitae asperiores, et atque, quaerat sint. Nostrum aut laboriosam
+    dolorem nemo distinctio ea eligendi similique hic delectus qui natus
+    dignissimos minus soluta tempore culpa modi quidem necessitatibus eum,
+    maxime perferendis? Aliquam, iste fuga. Repellat atque nesciunt laboriosam,
+    dolorum modi in enim. Consequuntur soluta nam distinctio aliquam.
+  </p>
+</ng-template>

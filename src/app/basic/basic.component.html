@@ -1,0 +1,20 @@
+<app-child-one (throwDataBackToParent)="onInputChange($event)"></app-child-one>
+<app-child-two [propWithPara]="'propsData'"></app-child-two>
+
+<app-spinner *ngIf="isLoading"></app-spinner>
+
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div
+      class="card"
+      style="width: 18rem"
+      [ngStyle]="{ 'background-color': color }"
+      *ngFor="let cardData of animeData"
+    >
+      <img src="{{ cardData.anime_img }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">{{ cardData.anime_name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
